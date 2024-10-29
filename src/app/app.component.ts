@@ -39,7 +39,30 @@ export class AppComponent {
 		},
 	]
 
+	step2cards: { id: number; name: string }[] = [
+		{
+			id: 1,
+			name: 'Отслеживание цен и графиков',
+		},
+		{
+			id: 2,
+			name: 'Управление портфелем криптовалют',
+		},
+		{
+			id: 3,
+			name: 'Получение торговых сигналов и аналитики',
+		},
+		{
+			id: 4,
+			name: 'Обучение и новости о криптовалютах',
+		},
+	]
+
 	getStep1Cards() {
 		return this.step1cards
+	}
+
+	getStep2Cards() {
+		return this.step2cards
 	}
 }

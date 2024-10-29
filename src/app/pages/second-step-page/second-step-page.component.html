@@ -1,0 +1,24 @@
+<div class="bg-blue absolute -top-[138px] left-0 w-full h-[196px] opacity-20 blur-[50px]"></div>
+<app-top-menu [step]="2"></app-top-menu>
+<div class="w-full flex flex-col gap-1 mb-[45px]">
+    <app-base-title> Что вас интересует больше всего? </app-base-title>
+</div>
+<div class="flex flex-grow w-[calc(100%_+_11px)] overflow-hidden -mr-[11px]">
+    <ngx-simplebar class="h-full w-full pr-[11px]">
+        <div class="flex flex-col gap-2">
+            @for (card of cards; track card.id) {
+                <app-text-card
+                        class="cursor-pointer"
+                        [selected]="selectedCardIds.includes(card.id)"
+                        (click)="onSelectCard(card.id)"
+                >
+                    {{ card.name }}
+                </app-text-card>
+            }
+        </div>
+    </ngx-simplebar>
+</div>
+<app-base-button [disabled]="selectedCardIds.length === 0" class="mt-6">
+    Далее
+</app-base-button>
+

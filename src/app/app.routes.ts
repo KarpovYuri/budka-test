@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router'
 import { StartPageComponent } from './pages/start-page/start-page.component'
 import { FirstStepPageComponent } from './pages/first-step-page/first-step-page.component'
+import {SecondStepPageComponent} from "./pages/second-step-page/second-step-page.component";
 
 export const routes: Routes = [
 	{
@@ -10,5 +11,9 @@ export const routes: Routes = [
 	{
 		path: 'step1',
 		component: FirstStepPageComponent,
+	},
+	{
+		path: 'step2',
+		component: SecondStepPageComponent,
 	},
 ]
