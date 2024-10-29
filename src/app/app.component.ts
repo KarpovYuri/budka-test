@@ -58,11 +58,34 @@ export class AppComponent {
 		},
 	]
 
+	step3cards: { id: number; name: string }[] = [
+		{
+			id: 1,
+			name: 'Импортировать текущий портфель',
+		},
+		{
+			id: 2,
+			name: 'Начать новый портфель',
+		},
+		{
+			id: 3,
+			name: 'Получение торговых сигналов и аналитики',
+		},
+		{
+			id: 4,
+			name: 'Обучение и новости о криптовалютах',
+		},
+	]
+
 	getStep1Cards() {
 		return this.step1cards
 	}
 
 	getStep2Cards() {
 		return this.step2cards
+	}
+
+	getStep3Cards() {
+		return this.step3cards
 	}
 }

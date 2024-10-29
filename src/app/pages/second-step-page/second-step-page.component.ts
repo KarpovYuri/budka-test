@@ -6,6 +6,7 @@ import {BaseTitleComponent} from "../../common-ui/base-title/base-title.componen
 import {SimplebarAngularModule} from "simplebar-angular";
 import {TextCardComponent} from "../../common-ui/text-card/text-card.component";
 import {TopMenuComponent} from "../../common-ui/top-menu/top-menu.component";
+import {Router} from "@angular/router";
 
 @Component({
 	selector: 'app-second-step-page',
@@ -27,7 +28,7 @@ export class SecondStepPageComponent {
 	appComponent = inject(AppComponent)
 	selectedCardIds: number[] = []
 
-	constructor() {
+	constructor(private router: Router) {
 		this.cards = this.appComponent.getStep2Cards()
 	}
 
@@ -43,5 +44,12 @@ export class SecondStepPageComponent {
 		setTimeout(() => {
 			this.opacity = '100%'
 		}, 0)
+	}
+
+	onNextStep() {
+		this.opacity = '0'
+		setTimeout(() => {
+			this.router.navigate(['step3'])
+		}, 500)
 	}
 }
