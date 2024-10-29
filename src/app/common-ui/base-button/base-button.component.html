@@ -1,0 +1,9 @@
+<button
+	[ngClass]="disabled ? 'bg-disable' : 'bg-blue'"
+	class="px-6 py-3 rounded-xl bg-blue text-white transition-all"
+    [disabled]="disabled"
+>
+	<div [ngClass]="disabled ? 'opacity-50' : 'opacity-100'">
+		<ng-content></ng-content>
+	</div>
+</button>
