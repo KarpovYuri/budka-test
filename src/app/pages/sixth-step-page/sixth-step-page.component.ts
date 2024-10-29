@@ -9,7 +9,7 @@ import { AppComponent } from '../../app.component'
 import { Router } from '@angular/router'
 
 @Component({
-	selector: 'app-third-step-page',
+	selector: 'app-sixth-step-page',
 	standalone: true,
 	imports: [
 		BaseButtonComponent,
@@ -19,37 +19,15 @@ import { Router } from '@angular/router'
 		TextCardComponent,
 		TopMenuComponent,
 	],
-	templateUrl: './third-step-page.component.html',
-	styleUrl: './third-step-page.component.sass',
+	templateUrl: './sixth-step-page.component.html',
+	styleUrl: './sixth-step-page.component.sass',
 })
-export class ThirdStepPageComponent {
+export class SixthStepPageComponent {
 	@HostBinding('style.opacity') opacity = '0'
-	cards: { id: number; name: string }[] = []
-	appComponent = inject(AppComponent)
-	selectedCardIds: number[] = []
-
-	constructor(private router: Router) {
-		this.cards = this.appComponent.getStep3Cards()
-	}
-
-	onSelectCard(cardId: number) {
-		if (this.selectedCardIds.includes(cardId)) {
-			this.selectedCardIds = this.selectedCardIds.filter((id) => id !== cardId)
-		} else {
-			this.selectedCardIds.push(cardId)
-		}
-	}
 
 	ngOnInit() {
 		setTimeout(() => {
 			this.opacity = '100%'
 		}, 0)
-	}
-
-	onNextStep() {
-		this.opacity = '0'
-		setTimeout(() => {
-			this.router.navigate(['step6'])
-		}, 500)
 	}
 }

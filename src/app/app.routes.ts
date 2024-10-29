@@ -3,6 +3,7 @@ import { StartPageComponent } from './pages/start-page/start-page.component'
 import { FirstStepPageComponent } from './pages/first-step-page/first-step-page.component'
 import {SecondStepPageComponent} from "./pages/second-step-page/second-step-page.component";
 import {ThirdStepPageComponent} from "./pages/third-step-page/third-step-page.component";
+import {SixthStepPageComponent} from "./pages/sixth-step-page/sixth-step-page.component";
 
 export const routes: Routes = [
 	{
@@ -20,5 +21,9 @@ export const routes: Routes = [
 	{
 		path: 'step3',
 		component: ThirdStepPageComponent,
+	},
+	{
+		path: 'step6',
+		component: SixthStepPageComponent,
 	},
 ]
