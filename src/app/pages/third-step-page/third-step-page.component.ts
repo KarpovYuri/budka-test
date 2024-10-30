@@ -52,4 +52,11 @@ export class ThirdStepPageComponent {
 			this.router.navigate(['step6'])
 		}, 500)
 	}
+
+	onSettingsStep() {
+		this.opacity = '0'
+		setTimeout(() => {
+			this.router.navigate(['skip-settings'])
+		}, 500)
+	}
 }

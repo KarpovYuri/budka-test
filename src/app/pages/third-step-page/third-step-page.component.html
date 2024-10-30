@@ -1,5 +1,5 @@
 <div class="bg-blue absolute -top-[138px] left-0 w-full h-[196px] opacity-20 blur-[50px]"></div>
-<app-top-menu [step]="3"></app-top-menu>
+<app-top-menu [step]="3" (stepSettings)="onSettingsStep()"></app-top-menu>
 <div class="w-full flex flex-col gap-1 mb-8">
     <app-base-title> Хотите добавить свой портфель акций? </app-base-title>
     <app-base-subtitle class="mt-[18px]">или начать новый?</app-base-subtitle>

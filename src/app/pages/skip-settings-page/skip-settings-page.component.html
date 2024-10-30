@@ -1,0 +1,85 @@
+<div
+	class="bg-blue absolute -top-[138px] left-0 w-full h-[196px] opacity-20 blur-[50px]"
+></div>
+<div class="w-full flex flex-col gap-1 mb-[37px] mt-[56px]">
+	<app-base-title>
+		Вы уверены что хотите пропустить настройку виджетов?
+	</app-base-title>
+</div>
+<div class="flex flex-grow w-[calc(100%_+_11px)] overflow-hidden -mr-[11px]">
+	<ngx-simplebar class="h-full w-full pr-[11px] pb-8">
+		<div
+			class="p-4 rounded-2xl bg-background flex flex-col gap-4 border border-opacity-50 border-white relative"
+		>
+			<div
+				class="-z-20 absolute -bottom-[24px] left-[50%] translate-x-[-50%] rounded-[12px] w-[calc(100%_-_64px)] h-[94px] bg-background p-[1px] border border-white border-opacity-10 overflow-clip"
+			>
+				<div
+					class="bg-white opacity-10 h-full rounded-[11px] text-white blur-[34px]"
+				></div>
+			</div>
+			<div
+				class="-z-10 absolute -bottom-[13px] left-[50%] translate-x-[-50%] rounded-[12px] w-[calc(100%_-_34px)] h-[94px] bg-background p-[1px] border border-white border-opacity-10"
+			>
+				<div
+					class="bg-white opacity-10 h-full rounded-[11px] text-white blur-[34px]"
+				></div>
+			</div>
+			<p class="opacity-50 text-[14px] leading-[130%] font-bold">Акции</p>
+			<div
+				class="flex justify-between items-end pb-3 border-b border-white border-opacity-10"
+			>
+				<p class="text-[24px] leading-[140%] font-bold">
+					100,90<span
+						class="ml-1 text-[12px] leading-[130%] font-medium opacity-50"
+					>
+						USD
+					</span>
+				</p>
+				<p class="text-[12px] leading-[130%] mb-1">
+					<span class="text-success">+1$</span> (2.34%)
+				</p>
+			</div>
+			@for (item of cardsData; track item.id) {
+				<div class="flex flex-col">
+					<div class="flex justify-between text-[14px] leading-[130%]">
+						<div class="flex gap-2 items-center">
+							<img
+								[src]="'assets/icons/' + item.icon + '.svg'"
+								[alt]="item.icon"
+								class="w-6 h-6"
+							/>
+							<p class="font-bold">{{ item.title }}</p>
+						</div>
+						<p class="my-auto">{{ item.price }}</p>
+					</div>
+					<div
+						class="flex justify-between items-center text-[12px] leading-[130%] font-medium"
+					>
+						<div class="ms-8 opacity-50">{{ item.code }}</div>
+						<div
+							class="flex items-center gap-1"
+							[ngClass]="item.profit ? 'text-success' : 'text-red'"
+						>
+							<div
+								class="w-3 h-3"
+								[ngClass]="item.profit ? 'bg-arrow-success' : 'bg-arrow-red'"
+							></div>
+							{{ item.percent }}
+						</div>
+					</div>
+				</div>
+				<hr class="ml-8 opacity-10 last-of-type:hidden" />
+			}
+		</div>
+	</ngx-simplebar>
+</div>
+<div
+	class="text-[14px] leading-[140%] p-3 mt-[10px] cursor-pointer"
+	(click)="goFinalStep()"
+>
+	Пропустить
+</div>
+<app-base-button class="mt-[10px]" (click)="goBack()">
+	Продолжить настройку
+</app-base-button>

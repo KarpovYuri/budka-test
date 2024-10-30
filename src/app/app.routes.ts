@@ -4,6 +4,7 @@ import { FirstStepPageComponent } from './pages/first-step-page/first-step-page.
 import {SecondStepPageComponent} from "./pages/second-step-page/second-step-page.component";
 import {ThirdStepPageComponent} from "./pages/third-step-page/third-step-page.component";
 import {SixthStepPageComponent} from "./pages/sixth-step-page/sixth-step-page.component";
+import {SkipSettingsPageComponent} from "./pages/skip-settings-page/skip-settings-page.component";
 
 export const routes: Routes = [
 	{
@@ -25,5 +26,9 @@ export const routes: Routes = [
 	{
 		path: 'step6',
 		component: SixthStepPageComponent,
+	},
+	{
+		path: 'skip-settings',
+		component: SkipSettingsPageComponent,
 	},
 ]

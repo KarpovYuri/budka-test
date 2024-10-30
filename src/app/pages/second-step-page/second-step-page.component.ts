@@ -52,4 +52,11 @@ export class SecondStepPageComponent {
 			this.router.navigate(['step3'])
 		}, 500)
 	}
+
+	onSettingsStep() {
+		this.opacity = '0'
+		setTimeout(() => {
+			this.router.navigate(['skip-settings'])
+		}, 500)
+	}
 }
