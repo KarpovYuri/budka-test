@@ -31,12 +31,13 @@ export class HomePageComponent {
 	onNextStep() {
 		this.opacity = '0'
 		setTimeout(() => {
-			this.router.navigate(['home'])
+			this.router.navigate(['dashboard'])
 		}, 500)
 	}
 
 	cardData = {
 		title: 'Ваш криптовалютный портфель пуст',
 		description: 'Добавьте криптовалюту и отслеживайте их стоимость',
+		background: 1,
 	}
 }

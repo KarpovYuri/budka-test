@@ -18,6 +18,8 @@ module.exports = {
 				'arrow-red': 'url("./assets/icons/arrow-red.svg")',
 				notification: 'url("./assets/icons/notification.svg")',
 				'background-1': 'url("./assets/images/background-1.png")',
+				'background-2': 'url("./assets/images/background-2.png")',
+				'background-3': 'url("./assets/images/background-3.png")',
 			}
 		},
 	},

@@ -1,5 +1,6 @@
 <div
-	class="flex flex-col p-4 gap-2 w-full rounded-xl border border-dashed border-white border-opacity-50 bg-background-1 bg-no-repeat bg-[top_center] bg-cover"
+	class="flex flex-col p-4 gap-2 w-full rounded-xl border border-dashed border-white border-opacity-50 bg-no-repeat bg-[top_center] bg-cover"
+	[ngClass]="getClass()"
 >
 	<h2 class="max-w-[66%] text-[16px] leading-[140%] font-bold">
 		{{ cardData.title }}

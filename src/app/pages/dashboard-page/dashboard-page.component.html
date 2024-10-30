@@ -1,0 +1,23 @@
+<div class="pb-4 text-[16px] leading-[140%] font-medium w-full flex gap-2 items-center">
+	<div
+		class="orange-gradient w-[32px] h-[32px] rounded-full font-bold leading-[120%] ps-[2px] flex justify-center items-center"
+	>
+		AL
+	</div>
+	Здравствуйте, Алексей!
+</div>
+<div
+	class="uppercase w-full py-2 text-[20px] leading-[26px] font-semibold flex justify-between items-center"
+>
+	Дашборд
+	<img src="assets/icons/edit.svg" alt="edit" class="cursor-pointer" />
+</div>
+<div class="flex flex-grow w-[calc(100%_+_11px)] overflow-hidden -mr-[11px]">
+	<ngx-simplebar class="h-full w-full pr-[11px]">
+		<div class="flex flex-col gap-1">
+			@for (card of cardData; track card.id) {
+				<app-crypto-card [cardData]="card"></app-crypto-card>
+			}
+		</div>
+	</ngx-simplebar>
+</div>
