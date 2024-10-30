@@ -1,0 +1,12 @@
+<div class="flex flex-grow w-full items-center">
+	<div>
+		<div class="w-full flex flex-col max-w-[92%] gap-1 mb-[32px]">
+			<app-base-title>Ваш дашборд почти настроен</app-base-title>
+			<app-base-subtitle>
+				Хотите добавить кириптовалюту в виджет
+			</app-base-subtitle>
+		</div>
+		<app-crypto-card [cardData]="cardData"></app-crypto-card>
+	</div>
+</div>
+<app-base-button class="mt-[10px]"> Позже </app-base-button>

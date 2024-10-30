@@ -10,4 +10,18 @@ import {NgClass} from "@angular/common";
 })
 export class BaseButtonComponent {
 	@Input() disabled: boolean = false
+	@Input() fontSize: string = 'md'
+
+	getClass() {
+		return {
+			'text-[17px]': this.fontSize === 'md',
+			'leading-[24px]': this.fontSize === 'md',
+			'font-bold': this.fontSize === 'md',
+			'opacity-50': this.disabled,
+			'opacity-100': !this.disabled,
+			'text-[16px]': this.fontSize === 'sm',
+			'leading-[150%]': this.fontSize === 'sm',
+			'font-medium': this.fontSize === 'sm',
+		};
+	}
 }

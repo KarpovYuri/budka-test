@@ -5,6 +5,7 @@ import {SecondStepPageComponent} from "./pages/second-step-page/second-step-page
 import {ThirdStepPageComponent} from "./pages/third-step-page/third-step-page.component";
 import {SixthStepPageComponent} from "./pages/sixth-step-page/sixth-step-page.component";
 import {SkipSettingsPageComponent} from "./pages/skip-settings-page/skip-settings-page.component";
+import {HomePageComponent} from "./pages/home-page/home-page.component";
 
 export const routes: Routes = [
 	{
@@ -30,5 +31,9 @@ export const routes: Routes = [
 	{
 		path: 'skip-settings',
 		component: SkipSettingsPageComponent,
+	},
+	{
+		path: 'home',
+		component: HomePageComponent,
 	},
 ]

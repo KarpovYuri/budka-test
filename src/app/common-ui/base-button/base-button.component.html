@@ -1,11 +1,10 @@
 <button
 	[ngClass]="disabled ? 'bg-disable' : 'bg-blue'"
-	class="px-6 py-3 rounded-xl bg-blue text-white transition-all"
+	class="px-6 py-3 rounded-xl bg-blue text-white transition-all w-full"
 	[disabled]="disabled"
 >
 	<div
-		[ngClass]="disabled ? 'opacity-50' : 'opacity-100'"
-		class="text-[17x] leading-[24px] font-bold"
+		[ngClass]="getClass()"
 	>
 		<ng-content></ng-content>
 	</div>

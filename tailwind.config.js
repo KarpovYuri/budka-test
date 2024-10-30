@@ -17,6 +17,7 @@ module.exports = {
 				'arrow-success': 'url("./assets/icons/arrow-success.svg")',
 				'arrow-red': 'url("./assets/icons/arrow-red.svg")',
 				notification: 'url("./assets/icons/notification.svg")',
+				'background-1': 'url("./assets/images/background-1.png")',
 			}
 		},
 	},
